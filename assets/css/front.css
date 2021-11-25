@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: url("https://i1.wp.com/images.frandroid.com/wp-content/uploads/2020/11/macos-big-sur-apple-layers-fluidic-colorful-dark-wwdc-2020-5120x2880-1432-scaled.jpg?ssl=1");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#dock {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 15px;
+    width: 70%;
+
+}
+
+.icon {
+    transform: scale(0.9, 0.9);
+}
+
+img {
+    width: 90%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
