@@ -17,6 +17,7 @@ export let logo = [
 
 export let Icon = function () {
 
+    // create a icon
     this.create = function () {
         let icon = document.createElement("a");
         icon.id = "icon" + x;
@@ -43,6 +44,7 @@ export let Icon = function () {
             dock.bottom();
         }
 
+        // move the dock by double clicking on the left, up, right and down, also change the animation of the icons
         document.getElementById("dock").addEventListener("dblclick", function () {
             if (a === 0) {
                 // left
@@ -82,6 +84,7 @@ export let Icon = function () {
             }
         });
 
+        // brings up a fake page with the title of the icon that was clicked
         let click = document.getElementById("icon" + x);
         click.addEventListener("click", function () {
             let y = this.id;
@@ -98,6 +101,7 @@ export let Icon = function () {
         x++;
     }
 
+    // create an "add" button to add a new icon
     this.add = function () {
         let add = document.createElement("div");
         add.id = "add";
@@ -114,10 +118,12 @@ export let Icon = function () {
         tooltip.innerHTML = "Ajout";
         add.append(tooltip);
 
+        // brings up a fake page in which you can add an icon using the form
         document.getElementById("add").addEventListener("click", function () {
             let page = new Page();
             page.add();
 
+            // make the "add" page disappear
             document.getElementById("red2").addEventListener("click", function () {
                 document.getElementById("navigator2").style.display = "none";
             })

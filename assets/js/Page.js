@@ -5,6 +5,7 @@ export let Page = function (title) {
 
     this.title = title;
 
+    // create a fake page
     this.open = function () {
         let navigator = document.createElement("div");
         navigator.id = "navigator";
@@ -33,6 +34,7 @@ export let Page = function (title) {
 
     }
 
+    // create a page to add an icon
     this.add = function () {
 
         let navigator = document.createElement("div");
@@ -84,6 +86,7 @@ export let Page = function (title) {
         inputAdd.id = "inputAdd";
         navigator.append(inputAdd);
 
+        // We get all the input values to create the icon
         document.getElementById("inputAdd").addEventListener("click", function () {
             let image = document.getElementById("inputImage").value;
             let link = document.getElementById("inputLink").value;

@@ -1,6 +1,7 @@
 
 export let Dock = function (x) {
 
+    // the animation of the icons when they are at the bottom
     this.bottom = function () {
         let iconHover = document.getElementById("icon" + x);
         iconHover.addEventListener("mouseenter", function () {
@@ -18,6 +19,7 @@ export let Dock = function (x) {
         });
     }
 
+    // the animation of the icons when they are on the left
     this.left = function () {
         let iconHover = document.getElementById("icon" + x);
         iconHover.addEventListener("mouseenter", function () {
@@ -35,6 +37,7 @@ export let Dock = function (x) {
         });
     }
 
+    // the animation of the icons when they are at the top
     this.top = function () {
         let iconHover = document.getElementById("icon" + x);
         iconHover.addEventListener("mouseenter", function () {
@@ -52,6 +55,7 @@ export let Dock = function (x) {
         });
     }
 
+    // the animation of the icons when they are on the right
     this.right = function () {
         let iconHover = document.getElementById("icon" + x);
         iconHover.addEventListener("mouseenter", function () {
@@ -71,7 +75,7 @@ export let Dock = function (x) {
 }
 
 
-
+// creation of animation with icons
 function transform(recupId, iconHover, transform, margin, transform1, transform2, padding, size1, size2, direction) {
     let iconLess1 = document.getElementById("icon" + parseInt(recupId - 1));
     let iconLess2 = document.getElementById("icon" + parseInt(recupId - 2));
@@ -91,7 +95,7 @@ function transform(recupId, iconHover, transform, margin, transform1, transform2
     exist(iconAdd2, transform2, padding, b, size2);
 }
 
-
+// we check if the retrieved id exists, if so, I add some style to it
 function exist(id, transform, padding, b, w_h) {
     if (id) {
         id.style.transform = transform;
