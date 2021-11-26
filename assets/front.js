@@ -1,5 +1,5 @@
 import "./css/front.css";
-import {Icon, logo} from "./js/Icon";
+import {Icon, logo} from "./js/Icon.mjs";
 
 let icon = new Icon();
 

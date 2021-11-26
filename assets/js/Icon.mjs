@@ -1,5 +1,5 @@
-import {Dock} from "./Dock";
-import {Page} from "./Page";
+import {Dock} from "./Dock.mjs";
+import {Page} from "./Page.mjs";
 
 let x = 0;
 export let logo = [
@@ -95,9 +95,8 @@ export let Icon = function () {
 
             document.getElementById("red").addEventListener("click", function () {
                 document.getElementById("navigator").style.display = "none";
-            })
+            });
         });
-
         x++;
     }
 
@@ -126,8 +125,7 @@ export let Icon = function () {
             // make the "add" page disappear
             document.getElementById("red2").addEventListener("click", function () {
                 document.getElementById("navigator2").style.display = "none";
-            })
-        })
+            });
+        });
     }
-
 }

@@ -1,5 +1,5 @@
-import {logo} from "./Icon";
-import {Icon} from "./Icon";
+import {logo} from "./Icon.mjs";
+import {Icon} from "./Icon.mjs";
 
 export let Page = function (title) {
 
@@ -31,7 +31,6 @@ export let Page = function (title) {
         title.id = "title";
         title.innerHTML = this.title;
         top.append(title);
-
     }
 
     // create a page to add an icon
@@ -102,6 +101,6 @@ export let Page = function (title) {
                 document.getElementById("inputLink").value = "";
                 document.getElementById("inputTitle").value = "";
             }
-        })
+        });
     }
 }
